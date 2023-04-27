@@ -2,30 +2,16 @@ from django import forms
 from django.contrib.auth.forms import AuthenticationForm,UsernameField
 from . models import Patient
 
-# class AddPatientForm(forms.ModelForm):
-#     class Meta:
-#         model = Patient
-#         fields =['name','age','phone','Details']
-#         lables = {'name':'Name','age':'Age','phone':'Phone-No'}
-#         widgets ={
-#             'name':forms.TextInput(attrs={'class':'form-control'}),
-#             'age':forms.NumberInput(attrs={'class':'form-control'}),
-#             'phone':forms.TextInput(attrs={'class':'form-control'}),
-#             'Details':forms.TextInput(attrs={'class':'form-control'}),
-#         }
-
-
 class AddPatientForm(forms.ModelForm):
     class Meta:
         model = Patient
-        fields = ['name', 'age', 'phone', 'Details', 'visitdate']
-        labels = {'name': 'Name', 'age': 'Age', 'phone': 'Phone-No', 'visitdate': 'Visit Date and Time'}
-        widgets = {
-            'name': forms.TextInput(attrs={'class': 'form-control'}),
-            'age': forms.NumberInput(attrs={'class': 'form-control'}),
-            'phone': forms.TextInput(attrs={'class': 'form-control'}),
-            'Details': forms.TextInput(attrs={'class': 'form-control'}),
-            'visitdate': forms.DateTimeInput(attrs={'class': 'form-control', 'type': 'datetime-local'}, format='%Y-%m-%d %H:%M:%S'),
+        fields =['name','age','phone','Details']
+        lables = {'name':'Name','age':'Age','phone':'Phone-No'}
+        widgets ={
+            'name':forms.TextInput(attrs={'class':'form-control'}),
+            'age':forms.NumberInput(attrs={'class':'form-control'}),
+            'phone':forms.TextInput(attrs={'class':'form-control'}),
+            'Details':forms.TextInput(attrs={'class':'form-control'}),
         }
         
 class LogInForm(AuthenticationForm):
