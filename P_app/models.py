@@ -7,8 +7,7 @@ class Patient(models.Model):
     age=models.CharField(max_length=2)
     phone=models.CharField(max_length=10)
     Details = models.TextField()
-    visitdate = models.DateTimeField(input_formats=['%Y-%m-%d %H:%M'])
-#     visitdate=models.DateTimeField(auto_now=True)
+    visitdate=models.DateTimeField(auto_now=True)
 
     def __str__(self):
         return self.name
