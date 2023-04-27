@@ -23,7 +23,7 @@ class AddPatientForm(forms.ModelForm):
             'age': forms.NumberInput(attrs={'class': 'form-control'}),
             'phone': forms.TextInput(attrs={'class': 'form-control'}),
             'Details': forms.TextInput(attrs={'class': 'form-control'}),
-            'visitdate': forms.DateTimeInput(attrs={'class': 'form-control', 'type': 'datetime-local'}, format='%Y-%m-%dT%H:%M:%S'),
+            'visitdate': forms.DateTimeInput(attrs={'class': 'form-control', 'type': 'datetime-local'}, format='%Y-%m-%dT%H:%M'),
         }
         
 class LogInForm(AuthenticationForm):
