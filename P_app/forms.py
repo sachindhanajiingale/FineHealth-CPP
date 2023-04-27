@@ -13,17 +13,18 @@ from . models import Patient
 #             'phone':forms.TextInput(attrs={'class':'form-control'}),
 #             'Details':forms.TextInput(attrs={'class':'form-control'}),
 #         }
+
 class AddPatientForm(forms.ModelForm):
     class Meta:
         model = Patient
-        fields = ['name', 'age', 'phone', 'Details', 'visitdate']
-        labels = {'name': 'Name', 'age': 'Age', 'phone': 'Phone-No', 'visitdate': 'Visit Date and Time'}
-        widgets = {
-            'name': forms.TextInput(attrs={'class': 'form-control'}),
-            'age': forms.NumberInput(attrs={'class': 'form-control'}),
-            'phone': forms.TextInput(attrs={'class': 'form-control'}),
-            'Details': forms.TextInput(attrs={'class': 'form-control'}),
-            'visitdate': forms.DateTimeInput(attrs={'class': 'form-control', 'type': 'datetime-local'}, format='%Y-%m-%dT%H:%M'),
+        fields =['name','age','phone','visitdate', 'Details']
+        labels = {'name':'Name','age':'Age','phone':'Phone-No', 'date':'visitdate'}
+        widgets ={
+            'name':forms.TextInput(attrs={'class':'form-control'}),
+            'age':forms.NumberInput(attrs={'class':'form-control'}),
+            'phone':forms.TextInput(attrs={'class':'form-control'}),
+            'visitdate': forms.DateTimeInput(attrs={'class': 'form-control', 'type': 'datetime-local'}, format='%Y-%m-%dT%H:%M:%S'),
+            'Details':forms.TextInput(attrs={'class':'form-control'}),
         }
         
 class LogInForm(AuthenticationForm):
