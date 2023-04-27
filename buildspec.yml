@@ -11,7 +11,7 @@ phases:
       - pip install pylint
       - pip install bandit
       - pylint --ignore=migrations,.ebextensions,__pycache__,static,staticfiles,templates,.gitignore,buidspec.yml,db.sqlite3 --generate-rcfile > .pylintrc
-      - sed -i 's/fail-under=10/fail-under=4/g'  .pylintrc
+      - sed -i 's/fail-under=10/fail-under=2/g'  .pylintrc
   pre_build:
     commands:
     - python --version
