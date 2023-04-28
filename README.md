@@ -6,6 +6,11 @@ Username: sachin
 
 Password: admin
 
+
+
+
+
+
 **Dependencies to run my project on local machine and as well as on AWS Cloud9 or deploying on Elastic Beanstalk is mentioned in my Requirements.txt file.**
 
 **Basic Commands for the project if you download it on local machine to test:**
